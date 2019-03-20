@@ -1,0 +1,250 @@
+/*!
+ * Template - Template for Tailwind v4.1.1 (https://tailwind-css-template.netlify.com/)
+ * 2019-2019 Donna Galletta
+ * Licensed under MIT (Template for Tailwind/blob/master/LICENSE)
+ */
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  background-color: black;
+}
+
+@media (min-width: 576px) {
+  .lg\:text-9xl {
+    font-size: 9rem;
+  }
+  .lg\:h-70 {
+    height: 22rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+.text-gold {
+  color: #8e7e4b;
+}
+
+.bg-blackest {
+  background-color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+.z-100 {
+  z-index: 100 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.embed-responsive {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+
+button.scroll_down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 30px;
+  bottom: 60px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button.scroll_down:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scroll_down_btn-animation 2s infinite;
+  animation: scroll_down_btn-animation 2s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes scroll_down_btn-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scroll_down_btn-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .time {
+    background: #8e7e4b;
+    padding: 30px 290px;
+  }
+  .time h2 {
+    padding-bottom: 10px;
+  }
+  .time_text {
+    width: 190px;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .time {
+    background: #8e7e4b;
+    padding-bottom: 2rem;
+  }
+  .time h2 {
+    padding-bottom: 10px;
+  }
+  .time_text {
+    width: 70px;
+    display: block;
+  }
+}
+
+.trans {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}
+
+.trans-x2 {
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+.full-video {
+  position: relative;
+  background-color: black;
+  height: 115vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-video video, .full-video iframe {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.full-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1e212a;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .full-video {
+    background: url("/img/video-01.gif") black no-repeat;
+    background-size: cover;
+    background-position: 32%;
+  }
+  .full-video video {
+    display: none;
+  }
+}
+
+.flare {
+  width: 110%;
+  height: 110%;
+  top: -10%;
+  left: -10%;
+  opacity: .66;
+  position: absolute;
+  background-image: url(../img/flare.png);
+  background-size: cover;
+  z-index: 4;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}

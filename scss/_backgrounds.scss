@@ -1,0 +1,60 @@
+
+.full-video {
+    position: relative;
+    background-color: black;
+    height: 115vh;
+    width: 100%;
+    overflow: hidden;
+    video, iframe {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #1e212a;
+      z-index: 1;
+    }
+  }
+  @media (pointer: coarse) and (hover: none) {
+    .full-video {
+      background: url('/img/video-01.gif') black no-repeat;
+      background-size: cover;
+      background-position: 32%;
+    }
+    .full-video video {
+      display: none;
+    }
+  }
+
+
+
+
+
+.flare{
+  width: 110%;
+  height: 110%;
+  top:-10%;
+  left:-10%;
+  opacity: .66;
+  position: absolute;
+  background-image: url(../img/flare.png);
+  background-size: cover;
+  z-index: 4;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+

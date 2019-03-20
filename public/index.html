@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1, viewport-fit=cover">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link href="img/favicon.png" rel="icon" type="image/x-icon" />
+      <meta name="google-site-verification" content="ZD4OObUOclRm4XtYkeZdkqzODnVCWZuJO2Zf2NpmewE" />
+  
+      <title>Save the date</title>
+      
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    
+    <link href="css/main.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top" onload="randombg()">
+    <div class="parallaxBG" id="random" >  
+        <section class="p-8 full-video">
+            <div class="container mx-auto">
+                <div class="flex-grow flex flex-col justify-center text-center">
+                    <div class="overlay opacity-75"></div>
+    
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="img/video-01.mp4" type="video/mp4">
+                </video>
+
+                </div>
+            </div>
+       </section>
+    </div>
+
+                        
+    <div class="text-info absolute pin z-10 flex-grow flex flex-col justify-center text-right">
+         <div class="animated fadeInRight trans w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mx-auto lg:py-24 pr-10 text-gold">
+            <h3 class="lg:text-9xl text-5xl pb-10 tracking-wide"> Save the date</h3>
+            <a target="_blank" href="https://goo.gl/maps/vKcirVdyJsr" class="uppercase text-gold hover:text-grey-dark tracking-wide font-bold pt-10 text-lg">19th April 2019, Melbourne Australia </a>
+            <p class="pt-2 text-lg">More information and invites coming soon</p>
+        </div>
+
+        <div class="opacity-50 animated fadeIn trans-x2">
+            <ul class="time flex list-reset text-black text-center absolute pin-b pin-r">
+                    <li class="px-5 time_text"><h2 class="" id="days"></h2><p class="text-sm uppercase">Days</p></li>
+                    <li class="px-5 time_text"><h2 class="" id="hours"></h2><p class="text-sm uppercase">Hrs</p></li>
+                    <li class="px-5 time_text"><h2 class="" id="minutes"></h2><p class="text-sm uppercase">Min</sp></li>
+                    <li class="px-5 time_text"><h2 class="" id="seconds"></h2><p class="text-sm uppercase">Sec</p></li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+
+
+   <div class="flare"></div>
+
+
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.3/dist/aos.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+
+            <script src="js/main.min.js"></script>
+
+   <!-- parallaxEffect -->
+    <script src="js/TweenLite.min.js"></script>
+
+
+        <script>
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+
+            let countDown = new Date('April 19, 2019 00:00:00').getTime(),
+                x = setInterval(function() {
+
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById('days').innerText = Math.floor(distance / (day)),
+                    document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+                }, second)
+
+          </script>
+
+
+
+</html>
+  
